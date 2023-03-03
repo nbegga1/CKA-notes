@@ -27,7 +27,7 @@ Note: ETCD has its own CA file.
 - Default kubeconfig file is located at: `${HOME}/.kube/config`
   - If you want to use a contex that is not not defined in your default kubeconfig file `kubectl config use-context <context> --kubeconfig <path-to-your-kubeconfig>`
 
-  ## RBAC
+## RBAC
 
 - Check authorization modes: `cat /etc/kubernetes/manifests/kube-apiserver.yaml`
 - Check user permission: `kubectl auth can -i get-pods -n default --as <user>`
