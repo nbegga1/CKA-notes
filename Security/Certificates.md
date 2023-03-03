@@ -14,3 +14,9 @@ Note: ETCD has its own CA file.
   - `docker logs <container-id>`
   - Look at what is going wrong
     - Possible issue: connection with pod on port `2379` is failing. This indicates an issue with the `etcd` pod. Check logs of `etcd` container to troubleshoot...
+
+## Certificates API
+
+- Create CertificateSigningRequest
+  - Get sample from https://kubernetes.io/docs/reference/access-authn-authz/certificate-signing-requests/ under the heading 'Create CertificateSigningRequest'
+  - Use encoded .csr from user `cat <csr-file> | base64 -w 0`
