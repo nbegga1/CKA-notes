@@ -20,3 +20,16 @@ Note: ETCD has its own CA file.
 - Create CertificateSigningRequest
   - Get sample from https://kubernetes.io/docs/reference/access-authn-authz/certificate-signing-requests/ under the heading 'Create CertificateSigningRequest'
   - Use encoded .csr from user `cat <csr-file> | base64 -w 0`
+
+
+## Kubeconfig
+
+- Default kubeconfig file is located at: `${HOME}/.kube/config`
+  - If you want to use a contex that is not not defined in your default kubeconfig file `kubectl config use-context <context> --kubeconfig <path-to-your-kubeconfig>`
+
+  ## RBAC
+
+- Check authorization modes: `cat /etc/kubernetes/manifests/kube-apiserver.yaml`
+- Check user permission: `kubectl auth can -i get-pods -n default --as <user>`
+- Create role from scratch `kubectl create role --help`
+- Create rolebinding from scratch `kubectl create rolebinding --help`
