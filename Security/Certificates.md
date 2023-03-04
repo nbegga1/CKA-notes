@@ -49,4 +49,8 @@ Note: ETCD has its own CA file.
 
 - Store docker credentials: `kubectl create secret docker-registry <secret-name> --docker-server=<registry-server-name> --docker-username=<username> --docker-password=<password> --docker-email=<email>`
 - OR `kubectl create secret docker-registry --help`
-- Use secret in deployment under pod spec: `imagePullSecrets: - name: <secret-name>` 
+- Use secret in deployment under pod spec: `imagePullSecrets: - name: <secret-name>`
+
+## Security contexts
+
+- Find out which user the container runs as: `kubectl exec <container-name> -- whoami`
