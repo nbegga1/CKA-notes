@@ -33,3 +33,9 @@ Note: ETCD has its own CA file.
 - Check user permission: `kubectl auth can -i get-pods -n default --as <user>`
 - Create role from scratch `kubectl create role --help`
 - Create rolebinding from scratch `kubectl create rolebinding --help`
+
+## Cluster roles
+
+- Create clusterrole from scratch `kubectl create clusterrole --help`
+- Create clusterrolebinding from scratch `kubectl create clusterrolebinding --help`
+- Get possible api-resources to apply permissions for `kubectl api-resources`
