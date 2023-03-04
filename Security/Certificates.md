@@ -54,3 +54,4 @@ Note: ETCD has its own CA file.
 ## Security contexts
 
 - Find out which user the container runs as: `kubectl exec <container-name> -- whoami`
+- Run container as specific user: within pod spec under the container section add `securityContex:  runAsUser: <user-id>`
