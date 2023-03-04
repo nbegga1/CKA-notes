@@ -54,6 +54,49 @@ Note: ETCD has its own CA file.
 ## Security contexts
 
 - Find out which user the container runs as: `kubectl exec <container-name> -- whoami`
-- Run container as specific user: within pod spec under the container section add `securityContext:  runAsUser: <user-id>`
+- Run container as specific user: within pod spec under the container section add `securityContext: > runAsUser: <user-id>`
+- Add capabilities to user: within pod spec under the container section add `securityContext: > capabilities: <capability>`
 
 NOTE: Security context can be specified both at the pod level and the container level. Security contexts defined at the container level override any security context defined at the pod level. Also note that capabilities can only be defined at the container level.
+
+## Network policies
+
+- Example of networkpolicy yaml: https://kubernetes.io/docs/concepts/services-networking/network-policies/
+- Use multiple `to` or `from` if you want to allow traffic from/to multiple pods or ip's with different port numbers.
+```yaml
+...
+  egress:
+    - to:
+        ...
+    - to:
+        ...
+```
+
+NOTE: Take note of the subtle difference between 
+
+Allows ingress from a pod with the name `frontend` **AND** that is in the namespace `prod` 
+```yaml
+...
+  ingress:
+  - from
+    - podSelector
+          matchLabels:
+            name: frontend
+      namespaceSelector:
+          matchLabels:
+            name: prod
+```
+
+Allows ingress from any pod with the name `frontend` **OR** any pod that is in the namespace `prod`
+
+```yaml
+...
+  ingress:
+  - from
+    - podSelector
+          matchLabels:
+            name: frontend
+    - namespaceSelector:
+           matchLabels:
+             name: prod
+```
