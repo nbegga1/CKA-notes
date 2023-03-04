@@ -39,3 +39,14 @@ Note: ETCD has its own CA file.
 - Create clusterrole from scratch `kubectl create clusterrole --help`
 - Create clusterrolebinding from scratch `kubectl create clusterrolebinding --help`
 - Get possible api-resources to apply permissions for `kubectl api-resources`
+
+## Service Accounts
+
+- Service accounts can be used in rolebindings to provide permissions.
+- Add Service account to pod via deployment in the pod spec: `serviceAccountName: <sa-name>`
+
+## Image security
+
+- Store docker credentials: `kubectl create secret docker-registry <secret-name> --docker-server=<registry-server-name> --docker-username=<username> --docker-password=<password> --docker-email=<email>`
+- OR `kubectl create secret docker-registry --help`
+- Use secret in deployment under pod spec: `imagePullSecrets: - name: <secret-name>` 
