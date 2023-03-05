@@ -2,6 +2,7 @@
 
 - Mounting different types of volumes on pods: https://kubernetes.io/docs/concepts/storage/volumes/
 - Creating PVs and PVCs: https://kubernetes.io/docs/concepts/storage/persistent-volumes/
+  - When a PVC is mounted it looks for suitable PV to bind. PV must have sufficient storage capacity and accessmodes MUST match.
 - Possible PV reclaim policy values:
      - `"Delete"` means the volume will be deleted from Kubernetes on release
      from its claim. The volume plugin must support Deletion.
