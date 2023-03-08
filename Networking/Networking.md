@@ -16,3 +16,11 @@
 ## Networking weave
 
 - Check wich ip range the networking solution will be allocating: `kubectl logs -n kube-system <networking-solution-pod>` (ipalloc-range:.....)
+
+## Service networking
+
+- Services are created by the `kube-proxy` and are clusterwide virtual objects
+- Check **IP range** of services: `ps aux | grep kube-api-server` see `range=...`
+- **This range should not overlap with CNI range!**
+- Check iptables of a service: `iptables -L -t nat | grep <service-name>`
+- Entries created by kube-proxy and what **proxier** it uses: `cat /var/log/kube-proxy.log`
