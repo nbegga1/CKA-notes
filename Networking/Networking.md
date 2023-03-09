@@ -29,4 +29,10 @@
 
 - Get IP of coredns service: kubectl get <dns-service> -n kube-system` or look in the `kubelet` configmap.
 - Configuration file for configuring CoreDNS: `/etc/coredns/Corefile` inside CoreDNS pod. This is from configmap that is mounted in pod as a volume.
-- 
+- Services can be resolved in the following ways:
+  - <service-name> (if service 'is' in the same namespace)
+  - <service-name>.<namespace>
+  - <service-name>.<namespace>.svc
+  - <service-name>.<namespace>.svc.cluster.local
+- Ip of a service can be found by `kubectl describe svc -n <namespace> <service-name>` -> `IP: ...`
+- Ip that a service is redirecting to can be found by `kubectl describe svc -n <namespace> <service-name>` -> `Endpoints: ...`
