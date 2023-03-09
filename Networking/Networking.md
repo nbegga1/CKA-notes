@@ -15,7 +15,7 @@
 
 ## Networking weave
 
-- Check wich ip range the networking solution will be allocating: `kubectl logs -n kube-system <networking-solution-pod>` (ipalloc-range:.....)
+- Check wich **ip range** the networking solution will be allocating: `kubectl logs -n kube-system <networking-solution-pod>` see `ipalloc-range:...`
 
 ## Service networking
 
