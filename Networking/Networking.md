@@ -38,3 +38,5 @@
 - Ip that a service is redirecting to can be found by `kubectl describe svc -n <namespace> <service-name>` -> `Endpoints: ...`
 
 ## Ingress
+
+- rewrite-target option allows to change rewrite the input path so that `http://<ingress-service>:<ingress-port>/watch` becomes `http://<watch-service>:<port>/` instead of `http://<watch-service>:<port>/watch`
