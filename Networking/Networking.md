@@ -36,3 +36,5 @@
   - `<service-name>.<namespace>.svc.cluster.local`
 - Ip of a service can be found by `kubectl describe svc -n <namespace> <service-name>` -> `IP: ...`
 - Ip that a service is redirecting to can be found by `kubectl describe svc -n <namespace> <service-name>` -> `Endpoints: ...`
+
+## Ingress
