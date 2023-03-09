@@ -24,3 +24,9 @@
 - **This range should not overlap with CNI range!**
 - Check iptables of a service: `iptables -L -t nat | grep <service-name>`
 - Entries created by kube-proxy and what **proxier** it uses: `cat /var/log/kube-proxy.log`
+
+## DNS
+
+- Get IP of coredns service: kubectl get <dns-service> -n kube-system` or look in the `kubelet` configmap.
+- Configuration file for configuring CoreDNS: `/etc/coredns/Corefile` inside CoreDNS pod. This is from configmap that is mounted in pod as a volume.
+- 
