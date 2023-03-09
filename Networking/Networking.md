@@ -39,4 +39,4 @@
 
 ## Ingress
 
-- rewrite-target option allows to change rewrite the input path so that `http://<ingress-service>:<ingress-port>/watch` becomes `http://<watch-service>:<port>/` instead of `http://<watch-service>:<port>/watch`
+- rewrite-target option allows to change rewrite the input path so that `http://<ingress-service-input>:<ingress-port-input>/watch` becomes `http://<watch-service>:<port>/` instead of `http://<watch-service>:<port>/watch`
