@@ -42,4 +42,4 @@
 - create ingress to redirect everything with /<path> to the <service-name> service `kubectl create ingress <ingress-name> -n <namespace> --rule="/<path>=<service-name>:<port-number>"`
 - rewrite-target option allows to change rewrite the input path so that `http://<ingress-service-input>:<ingress-port-input>/watch` becomes `http://<watch-service>:<port>/` instead of `http://<watch-service>:<port>/watch`
 - Best practice is to expose apps deployed in different namespaces with different ingresses.
-  
+- 
