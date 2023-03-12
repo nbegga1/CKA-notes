@@ -13,3 +13,5 @@ Edit pod yaml will give error `error: pods "ubuntu-sleeper" is invalid  A copy o
 Get pod yaml sample: `kubectl run <pod-name> --image=<image-name> --dry-run=client -o yaml`
 
 Execute command in pod: `kubectl exec <pod-name> -- <command>`  (Add `-i -t` to get an interactive terminal)
+
+Switch to other default namespace: `kubectl config set-context --current --namespace=<namespace>`
