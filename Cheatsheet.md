@@ -15,3 +15,9 @@ Get pod yaml sample: `kubectl run <pod-name> --image=<image-name> --dry-run=clie
 Execute command in pod: `kubectl exec <pod-name> -- <command>`  (Add `-i -t` to get an interactive terminal)
 
 Switch to other default namespace: `kubectl config set-context --current --namespace=<namespace>`
+
+Controlplane components are static pods, for which the manifest is usually on the node filesystem: `/etc/kubernetes/manifests`
+
+Troubleshooting
+
+Cheatsheet: https://kubernetes.io/docs/reference/kubectl/cheatsheet/
