@@ -10,4 +10,6 @@
 
 ## Node Affinity
 
-- 
+- Label a node: `kubectl label node <node-name> <key>=<value>`
+-  ![image](https://user-images.githubusercontent.com/64038272/225858439-3e2aafb0-05f3-4659-993b-4b7d518ad581.png)
+
