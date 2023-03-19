@@ -15,7 +15,7 @@
 
 ## DaemonSets
 
-- Easy way to create DaemonSet yaml: `kubectl create deployment <ds-name> -n <namespace> --image=<image-name> --dry-run=client -o yaml` **and change `kind` from `Deployment` to `DaemonSet`**
+- Easy way to create DaemonSet yaml: `kubectl create deployment <ds-name> -n <namespace> --image=<image-name> --dry-run=client -o yaml` **and change** `kind: Deployment` **to** `kind: DaemonSet`
 ## Static pods
 
 - You can recognize static pods by looking if the nodename is appended to the end of the pod name. Or look at the `ownerReferences` in the pod yaml.
