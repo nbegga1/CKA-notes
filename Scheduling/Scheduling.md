@@ -13,9 +13,14 @@
 - Label a node: `kubectl label node <node-name> <key>=<value>`
 - Create node affinity on pod spec: ![image](https://user-images.githubusercontent.com/64038272/225858439-3e2aafb0-05f3-4659-993b-4b7d518ad581.png)
 
+## Resource Limits
+
+- If a pod is `OOMKilled` that means that it ran out of memory.
+
 ## DaemonSets
 
 - Easy way to create DaemonSet yaml: `kubectl create deployment <ds-name> -n <namespace> --image=<image-name> --dry-run=client -o yaml` **and change** `kind: Deployment` **to** `kind: DaemonSet`
+
 ## Static pods
 
 - You can recognize static pods by looking if the nodename is appended to the end of the pod name. Or look at the `ownerReferences` in the pod yaml.
