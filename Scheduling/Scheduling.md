@@ -15,6 +15,9 @@
 
 ## Resource Limits
 
+- Define resource limits for pod: ![image](https://user-images.githubusercontent.com/64038272/226167773-187cbce5-421e-4dec-ad6a-3314b890c3a5.png)
+- Define resource requests for pod: ![image](https://user-images.githubusercontent.com/64038272/226167800-34d2eaf0-6717-43fd-bdcf-f720855de638.png)
+
 - If a pod is `OOMKilled` that means that it ran out of memory.
 
 ## DaemonSets
