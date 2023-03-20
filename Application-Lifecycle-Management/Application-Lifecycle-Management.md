@@ -4,4 +4,4 @@
 
 ## Commands
 
-- When using the `CMD` command in the Dockerfile, if you use the `docker run` with paramaters the whole command specified in `CMD` will be **replaced**. However when using the `ENTRYPOINT` command the parameter you append to the `docker run` command will be **appended** to the command specified in the ENTRYPOINT 
+- When using the `CMD` command in the Dockerfile, if you use the `docker run` with paramaters the whole command specified in `CMD` will be **replaced**. However when using the `ENTRYPOINT` command the parameter you append to the `docker run` command will be **appended** to the command specified in the `ENTRYPOINT`
