@@ -8,3 +8,6 @@
 - If you want to override the `ENTRYPOINT` command specified in the Dockerfile, use the `--entrypoint` option with the `docker run` command.
 
 ## Environment variables
+
+- ![image](https://user-images.githubusercontent.com/64038272/226418138-0e135033-f746-4acb-9b07-eac39d0acb5f.png)
+- ![image](https://user-images.githubusercontent.com/64038272/226418440-f4619848-4f38-47e0-a646-56fcbbe94824.png)
