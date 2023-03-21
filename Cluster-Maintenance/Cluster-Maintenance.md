@@ -13,4 +13,5 @@
   - You must always upgrade **1** major version at a time
   - Make sure to drain a node before upgrading.
   - Make sure to do the kubeadm, kubelet and kubectl upgrades on the workernode itself.
-  - 
+  - ![image](https://user-images.githubusercontent.com/64038272/226656840-1efa8f43-ecb0-48a5-a7bb-2b82bc73c75b.png)
+
