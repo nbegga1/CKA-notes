@@ -15,4 +15,8 @@
 
 ## Secrets
 
+- Encode secret: `echo -n <secret> | base64`
+- Decode secret: `echo -n <secret> | decode`
 - Create secret imperative way: `kubectl create secret generic my-secret --from-literal=<key1>=<supersecret> --from-literal=<key2>=<topsecret>`
+- Inject secret in pod: ![image](https://user-images.githubusercontent.com/64038272/226535696-280e8213-14df-4dc5-bfd0-4d75ace7588b.png)
+
