@@ -15,3 +15,10 @@
   - Make sure to do the kubeadm, kubelet and kubectl upgrades on the workernode itself.
   - ![image](https://user-images.githubusercontent.com/64038272/226656840-1efa8f43-ecb0-48a5-a7bb-2b82bc73c75b.png)
 
+## ETCD
+
+- Take snapshot of the ETCD database: `ETCDCTL_API=3 etcdctl --endpoints=https://127.0.0.1:2379 --cacert=<trusted-ca-file> --cert=<cert-file> --key=<key-file> snapshot save <backup-file-location>`
+- Restore etcd: 
+  - `ETCDCTL_API=3 etcdctl snapshot restore --data-dir <new-etcd-location> <snapshot-location>`
+  - Modify etcd location in etcd manifest file because ETCD is a static pod: `vi /etc/kubernetes/manifest/etcd.yaml`
+  - Modify the volume path to `<new-etcd-location>`
