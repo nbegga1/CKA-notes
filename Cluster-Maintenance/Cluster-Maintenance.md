@@ -22,3 +22,5 @@
   - `ETCDCTL_API=3 etcdctl snapshot restore --data-dir <new-etcd-location> <snapshot-location>`
   - Modify etcd location in etcd manifest file because ETCD is a static pod: `vi /etc/kubernetes/manifest/etcd.yaml`
   - Modify the volume path to `<new-etcd-location>`
+- Stacked etcd: etcd is on the same node as the controlplane components
+- External etcd: etcd is not on the same node as the controlplane components
