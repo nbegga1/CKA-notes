@@ -21,3 +21,7 @@ Controlplane components are static pods, for which the manifest is usually on th
 Troubleshooting
 
 Cheatsheet: https://kubernetes.io/docs/reference/kubectl/cheatsheet/
+
+![image](https://user-images.githubusercontent.com/64038272/226975611-8bee0560-5b7b-4f0c-9252-6081fa035444.png)
+
+![image](https://user-images.githubusercontent.com/64038272/226975681-742b1ccd-b638-46d2-b3f7-6af9493511c6.png)
