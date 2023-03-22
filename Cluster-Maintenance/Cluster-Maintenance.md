@@ -8,6 +8,7 @@
   
 ## Cluster upgrade
 
+- Verify on which system your host is running: `cat /etc/*release*`
 - https://kubernetes.io/docs/tasks/administer-cluster/kubeadm/kubeadm-upgrade/
   - Controlplane components should always be upgraded first
   - You must always upgrade **1** major version at a time
