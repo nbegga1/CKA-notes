@@ -18,6 +18,8 @@ Switch to other default namespace: `kubectl config set-context --current --names
 
 Controlplane components are static pods, for which the manifest is usually on the node filesystem: `/etc/kubernetes/manifests`
 
+Expose pod,rs or deployment: `kubectl expose <object> ...`
+
 Troubleshooting
 
 Cheatsheet: https://kubernetes.io/docs/reference/kubectl/cheatsheet/
