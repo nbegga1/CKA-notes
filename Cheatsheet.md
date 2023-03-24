@@ -1,24 +1,26 @@
 # CKA-notes
 
-Get pod info: `kubectl get pod -o wide`
+- Verify what a user has permissions to do: `kubectl auth can-i <action> <resource> --namespace=<namespace> --as <user>`
 
-Usage of how to create objects: `kubectl create <object> --help`
+- Get pod info: `kubectl get pod -o wide`
 
-Wait for a pod to be in a `Running` state: `kubectl get pods -n <namespace> --watch`
+- Usage of how to create objects: `kubectl create <object> --help`
 
-Get documentation of object manifest: `kubectl explain <object>.<for-example-spec>.<for-example-imagePullSecret>`
+- Wait for a pod to be in a `Running` state: `kubectl get pods -n <namespace> --watch`
 
-Edit pod yaml will give error `error: pods "ubuntu-sleeper" is invalid  A copy of your changes has been stored to "/tmp/kubectl-edit-1063288277.yaml"`. Use `kubectl replace --force -f </tmp/...>` to force replace the pod yaml.
+- Get documentation of object manifest: `kubectl explain <object>.<for-example-spec>.<for-example-imagePullSecret>`
 
-Get pod yaml sample: `kubectl run <pod-name> --image=<image-name> --dry-run=client -o yaml`
+- Edit pod yaml will give error `error: pods "ubuntu-sleeper" is invalid  A copy of your changes has been stored to "/tmp/kubectl-edit-1063288277.yaml"`. Use `kubectl replace --force -f </tmp/...>` to force replace the pod yaml.
 
-Execute command in pod: `kubectl exec <pod-name> -- <command>`  (Add `-i -t` to get an interactive terminal)
+- Get pod yaml sample: `kubectl run <pod-name> --image=<image-name> --dry-run=client -o yaml`
 
-Switch to other default namespace: `kubectl config set-context --current --namespace=<namespace>`
+- Execute command in pod: `kubectl exec <pod-name> -- <command>`  (Add `-i -t` to get an interactive terminal)
 
-Controlplane components are static pods, for which the manifest is usually on the node filesystem: `/etc/kubernetes/manifests`
+- Switch to other default namespace: `kubectl config set-context --current --namespace=<namespace>`
 
-Expose pod,rs or deployment: `kubectl expose <object> ...`
+- Controlplane components are static pods, for which the manifest is usually on the node filesystem: `/etc/kubernetes/manifests`
+
+- Expose pod,rs or deployment: `kubectl expose <object> ...`
 
 Troubleshooting
 
