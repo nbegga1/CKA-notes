@@ -20,3 +20,12 @@
 - Create secret imperative way: `kubectl create secret generic my-secret --from-literal=<key1>=<supersecret> --from-literal=<key2>=<topsecret>`
 - Inject secret in pod: ![image](https://user-images.githubusercontent.com/64038272/226535696-280e8213-14df-4dc5-bfd0-4d75ace7588b.png)
 
+## Multi-container pods
+
+- The containers are on the same network, they can call each other by `localhost`
+- They can share the same volumes
+- ![image](https://user-images.githubusercontent.com/64038272/226541094-8faf2686-335f-4621-8a55-6508fd1b7078.png)
+
+## Init Containers
+
+
