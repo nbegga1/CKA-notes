@@ -1,6 +1,6 @@
 # CKA-notes
 
-- Get cluster info: `kubectl cluster-info (--kube-config <kubeconfig-file>)`
+- Get cluster info: `kubectl cluster-info (--kubeconfig <kubeconfig-file>)`
 
 - Verify what a user has permissions to do: `kubectl auth can-i <action> <resource> --namespace=<namespace> --as <user>`
 
