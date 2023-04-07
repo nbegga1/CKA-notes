@@ -1,5 +1,7 @@
 # CKA-notes
 
+- Test connection with temporary curl pod: `kubectl run curl-pod --image=alpine/curl --rm -ti -- sh`
+
 - Get cluster info: `kubectl cluster-info (--kubeconfig <kubeconfig-file>)`
 
 - Verify what a user has permissions to do: `kubectl auth can-i <action> <resource> --namespace=<namespace> --as <user>`
